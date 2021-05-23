@@ -1,0 +1,81 @@
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         192.168.106.32:443,192.168.143.84:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     reverse-proxy
+Namespace:                default
+Labels:                   service=reverse-proxy
+Annotations:              <none>
+Selector:                 service=reverse-proxy
+Type:                     LoadBalancer
+IP:                       10.100.245.206
+LoadBalancer Ingress:     ab283effe64a447709bf90f88ce8cfa9-885644206.ap-northeast-1.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31403/TCP
+Endpoints:                192.168.11.10:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     udagram-feed
+Namespace:                default
+Labels:                   service=udagram-feed
+Annotations:              <none>
+Selector:                 service=udagram-feed
+Type:                     LoadBalancer
+IP:                       10.100.121.84
+LoadBalancer Ingress:     a6dff1c91ea4946df8347f8127ed9c6d-1123045507.ap-northeast-1.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31190/TCP
+Endpoints:                192.168.54.169:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     udagram-frontend
+Namespace:                default
+Labels:                   service=udagram-frontend
+Annotations:              <none>
+Selector:                 service=udagram-frontend
+Type:                     LoadBalancer
+IP:                       10.100.37.211
+LoadBalancer Ingress:     a89eb7e645f714ade89dcf3d93179931-610505274.ap-northeast-1.elb.amazonaws.com
+Port:                     <unset>  8100/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  32133/TCP
+Endpoints:                192.168.27.189:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     udagram-user
+Namespace:                default
+Labels:                   service=udagram-user
+Annotations:              <none>
+Selector:                 service=udagram-user
+Type:                     LoadBalancer
+IP:                       10.100.193.249
+LoadBalancer Ingress:     a87dd139e871047318c491eebcb0ac89-540371726.ap-northeast-1.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  32527/TCP
+Endpoints:                192.168.35.160:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>

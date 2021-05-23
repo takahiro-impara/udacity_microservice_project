@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  udagram-api_feed:
+    env_file:
+      - set_env.env
+    build: ./udagram-api_feed
+    volumes:
+      - $HOME/.aws:/root/.aws
+    ports:
+      - "8080:8080"
+  udagram-api_user:
+    env_file:
+      - set_env.env
+    build: ./udagram-api_user
+    volumes:
+      - $HOME/.aws:/root/.aws
+    ports:
+      - "8080:8080"
+  udagram-frontend:
+    build: ./udagram-frontend
+    ports:
+      - "8100:80"
