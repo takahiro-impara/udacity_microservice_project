@@ -1,0 +1,5 @@
+NAME                               READY   STATUS    RESTARTS   AGE
+reverse-proxy-6c68867b6-4rv82      1/1     Running   0          45m
+udagram-feed-785f7df85d-tsmp7      1/1     Running   0          8m39s
+udagram-frontend-9db8ff876-95b9t   1/1     Running   0          127m
+udagram-user-5748766976-2rxbj      1/1     Running   0          4h54m
